@@ -1,4 +1,4 @@
-/* iPod nano v1 inspired design: pristine, calm, confident */
+/* Maximum legitimacy design: institutional, confident, secure */
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    background: #fafafa;
+    background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 100%);
     color: #1a1a1a;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -19,74 +19,164 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 680px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 0 24px;
+    background: #fafafa;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
 }
 
+/* Header with status indicator */
 header {
-    padding: 48px 0 24px;
+    padding: 40px 0 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.02em;
     color: #1a1a1a;
 }
 
+/* Status indicator - subtle green dot */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+    }
+    50% {
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+    }
+}
+
+.status-text {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+/* Main content */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 48px 0;
+    padding: 64px 0;
+}
+
+/* Security badge - subtle lock indicator */
+.security-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 32px;
+    padding: 8px 14px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    width: fit-content;
+    letter-spacing: -0.01em;
+}
+
+.security-badge svg {
+    color: #10b981;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 300;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     color: #1a1a1a;
-    margin-bottom: 24px;
-    line-height: 1.2;
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
 .description {
     font-size: 17px;
     color: #666;
     margin-bottom: 48px;
-    max-width: 520px;
-    line-height: 1.5;
+    max-width: 540px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
 }
 
 .positioning {
     font-size: 14px;
     color: #999;
     font-weight: 400;
-    letter-spacing: 0.01em;
-    padding-top: 24px;
-    border-top: 1px solid #e8e8e8;
+    letter-spacing: 0;
+    padding-top: 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+.established {
+    font-size: 12px;
+    color: #bbb;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 16px;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+}
+
+/* Footer with institutional structure */
 footer {
     padding: 32px 0 48px;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
     margin-top: auto;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.01) 100%);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-links {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
     font-size: 14px;
 }
 
 .footer-links a {
     color: #666;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
+    font-weight: 500;
 }
 
 .footer-links a:hover {
@@ -100,50 +190,97 @@ footer {
 .powered-by {
     font-size: 13px;
     color: #999;
+    font-weight: 400;
 }
 
 .powered-by a {
     color: #1a1a1a;
     text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
+    font-weight: 600;
+    transition: opacity 0.15s ease;
 }
 
 .powered-by a:hover {
     opacity: 0.7;
 }
 
+/* Professional contact section */
+.footer-contact {
+    text-align: right;
+}
+
+.contact-label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.contact-links a {
+    color: #666;
+    text-decoration: none;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+    font-size: 12px;
+    transition: color 0.15s ease;
+}
+
+.contact-links a:hover {
+    color: #1a1a1a;
+}
+
 /* Legal pages styling */
 .legal-page {
     max-width: 720px;
     margin: 0 auto;
-    padding: 48px 24px;
+    padding: 0 24px 48px;
+    background: #fafafa;
+    min-height: 100vh;
+}
+
+.legal-header {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 32px;
 }
 
 .legal-page h1 {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
     margin-bottom: 8px;
 }
 
 .legal-page .last-updated {
     font-size: 14px;
     color: #999;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+    font-weight: 500;
 }
 
 .legal-page h2 {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 32px;
+    margin-top: 40px;
     margin-bottom: 16px;
     color: #1a1a1a;
+    letter-spacing: -0.02em;
 }
 
 .legal-page p {
     font-size: 15px;
     color: #666;
     margin-bottom: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .legal-page ul {
@@ -154,43 +291,92 @@ footer {
 .legal-page li {
     font-size: 15px;
     color: #666;
-    margin-bottom: 8px;
-    line-height: 1.6;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.legal-page strong {
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
 .legal-page a {
     color: #1a1a1a;
     text-decoration: underline;
-    transition: opacity 0.2s ease;
+    text-decoration-color: rgba(0, 0, 0, 0.2);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.15s ease;
 }
 
 .legal-page a:hover {
-    opacity: 0.7;
+    text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
 .back-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 14px;
     color: #666;
     text-decoration: none;
-    margin-bottom: 24px;
-    transition: color 0.2s ease;
+    margin-bottom: 32px;
+    transition: color 0.15s ease;
+    font-weight: 500;
 }
 
 .back-link:hover {
     color: #1a1a1a;
 }
 
+/* Responsive design */
 @media (max-width: 640px) {
-    h1 {
-        font-size: 32px;
+    .container {
+        box-shadow: none;
     }
 
-    .description {
-        font-size: 16px;
+    h1 {
+        font-size: 36px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-contact {
+        text-align: left;
     }
 
     header {
-        padding: 32px 0 16px;
+        padding: 32px 0 20px;
+    }
+
+    main {
+        padding: 48px 0;
+    }
+
+    .legal-page h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .status-text {
+        display: none;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .contact-links .divider {
+        display: none;
     }
 }

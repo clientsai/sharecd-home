@@ -10,10 +10,24 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">ShareCD</div>
+            <div class="header-content">
+                <div class="logo">ShareCD</div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">All systems operational</span>
+                </div>
+            </div>
         </header>
 
         <main>
+            <div class="security-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 1L3 3V7C3 10.5 5.5 13.5 8 15C10.5 13.5 13 10.5 13 7V3L8 1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M6 8L7.5 9.5L10.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>TLS encrypted delivery</span>
+            </div>
+
             <h1>Secure Link Delivery</h1>
             <p class="description">
                 A neutral utility bridge for secure document and content delivery.
@@ -23,16 +37,32 @@
             <div class="positioning">
                 ShareCD — a Clients Drive system powered by Clients.ai.
             </div>
+
+            <div class="established">
+                Est. 2025
+            </div>
         </main>
 
         <footer>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy</a>
-                <span class="divider">·</span>
-                <a href="terms.html">Terms</a>
-            </div>
-            <div class="powered-by">
-                Powered by <a href="https://clients.ai" target="_blank" rel="noopener">Clients.ai</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="privacy.html">Privacy</a>
+                        <span class="divider">·</span>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                    <div class="powered-by">
+                        Powered by <a href="https://clients.ai" target="_blank" rel="noopener">Clients.ai</a>
+                    </div>
+                </div>
+                <div class="footer-section footer-contact">
+                    <div class="contact-label">Support</div>
+                    <div class="contact-links">
+                        <a href="mailto:support@clients.ai">support@clients.ai</a>
+                        <span class="divider">·</span>
+                        <a href="mailto:security@clients.ai">security@clients.ai</a>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
