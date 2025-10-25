@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Status — ShareCD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="legal-page">
+        <div class="legal-header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="logo.svg" alt="ShareCD" class="logo-image" width="120" height="32">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <a href="about.html">About</a>
+                    <a href="security.html">Security</a>
+                    <a href="status.html" class="nav-active">Status</a>
+                </nav>
+            </div>
+        </div>
+
+        <h1>System Status</h1>
+        <p class="last-updated">Real-time operational status</p>
+
+        <div class="status-card status-operational">
+            <div class="status-card-header">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="8" fill="#10b981"/>
+                    <path d="M7 10L9 12L13 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2>All Systems Operational</h2>
+            </div>
+            <p>All ShareCD services are functioning normally.</p>
+        </div>
+
+        <h2>Services</h2>
+
+        <div class="service-status">
+            <div class="service-item">
+                <div class="service-info">
+                    <span class="service-name">Link Routing</span>
+                    <span class="service-desc">301 redirect service</span>
+                </div>
+                <div class="service-indicator operational">
+                    <span class="status-dot"></span>
+                    <span>Operational</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <span class="service-name">TLS Encryption</span>
+                    <span class="service-desc">End-to-end encryption</span>
+                </div>
+                <div class="service-indicator operational">
+                    <span class="status-dot"></span>
+                    <span>Operational</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <span class="service-name">Analytics</span>
+                    <span class="service-desc">Engagement data logging</span>
+                </div>
+                <div class="service-indicator operational">
+                    <span class="status-dot"></span>
+                    <span>Operational</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <span class="service-name">API</span>
+                    <span class="service-desc">Partner integrations</span>
+                </div>
+                <div class="service-indicator operational">
+                    <span class="status-dot"></span>
+                    <span>Operational</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Performance Metrics</h2>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">99.9%</div>
+                <div class="metric-label">Uptime (30 days)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">< 50ms</div>
+                <div class="metric-label">Avg Response Time</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Active Incidents</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">24/7</div>
+                <div class="metric-label">Monitoring</div>
+            </div>
+        </div>
+
+        <h2>Incident History</h2>
+        <p>No incidents reported in the last 90 days.</p>
+
+        <div class="info-box">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
+                <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 7V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="8" cy="5" r="0.5" fill="currentColor"/>
+            </svg>
+            <div>
+                <strong>Status Updates</strong><br>
+                For real-time status updates and to subscribe to incident notifications, contact
+                <a href="mailto:support@clients.ai">support@clients.ai</a>.
+            </div>
+        </div>
+
+        <h2>Infrastructure</h2>
+        <p>ShareCD operates on redundant infrastructure with:</p>
+        <ul>
+            <li>Multi-region deployment with automatic failover</li>
+            <li>Global CDN for low-latency routing</li>
+            <li>DDoS protection and rate limiting</li>
+            <li>Real-time health monitoring and alerting</li>
+            <li>Automated incident response procedures</li>
+        </ul>
+
+        <h2>Transparency</h2>
+        <p>
+            We believe in full operational transparency. This page is updated in real-time to reflect
+            the current state of ShareCD services. For historical incident reports or detailed technical
+            information, contact <a href="mailto:support@clients.ai">support@clients.ai</a>.
+        </p>
+
+        <footer style="margin-top: 64px; padding-top: 32px; border-top: 1px solid rgba(0, 0, 0, 0.06);">
+            <div class="footer-links" style="margin-bottom: 12px;">
+                <a href="privacy.html">Privacy</a>
+                <span class="divider">·</span>
+                <a href="terms.html">Terms</a>
+                <span class="divider">·</span>
+                <a href="about.html">About</a>
+                <span class="divider">·</span>
+                <a href="security.html">Security</a>
+            </div>
+            <div class="business-entity" style="margin-bottom: 8px;">
+                ShareCD™ is a service of Clients.ai, Inc. · Delaware, USA
+            </div>
+            <div class="powered-by">
+                Powered by <a href="https://clients.ai" target="_blank" rel="noopener">Clients.ai
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-left: 2px; vertical-align: middle;">
+                    <path d="M3 3H9V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 3L3 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg></a>
+            </div>
+            <div class="copyright" style="margin-top: 8px;">
+                © 2025 Clients.ai, Inc. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

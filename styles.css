@@ -38,6 +38,12 @@ header {
     align-items: center;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
 .logo {
     font-size: 18px;
     font-weight: 600;
@@ -342,6 +348,185 @@ footer {
     margin-bottom: 32px;
 }
 
+/* Logo image styling */
+.logo-link {
+    display: block;
+    line-height: 0;
+}
+
+.logo-image {
+    display: block;
+    height: 32px;
+    width: auto;
+}
+
+/* Main navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.main-nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #1a1a1a;
+}
+
+.main-nav a.nav-active {
+    color: #1a1a1a;
+}
+
+.main-nav a.nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #10b981;
+}
+
+/* Status page components */
+.status-card {
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.status-card-operational {
+    background: linear-gradient(to bottom, rgba(16, 185, 129, 0.03), rgba(16, 185, 129, 0.01));
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.status-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.status-card-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.status-card p {
+    margin: 0;
+    color: #666;
+}
+
+.service-status {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.service-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.service-desc {
+    font-size: 13px;
+    color: #999;
+}
+
+.service-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.service-indicator.operational {
+    color: #10b981;
+}
+
+.service-indicator .status-dot {
+    width: 8px;
+    height: 8px;
+    background: currentColor;
+    border-radius: 50%;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.metric-card {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.info-box {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    border-radius: 6px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.info-box svg {
+    color: #10b981;
+}
+
 .legal-page h1 {
     font-size: 36px;
     font-weight: 300;
@@ -431,6 +616,20 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .main-nav {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
     }
 
     .footer-content {
