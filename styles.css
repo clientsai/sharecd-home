@@ -1,0 +1,196 @@
+/* iPod nano v1 inspired design: pristine, calm, confident */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    padding: 48px 0 24px;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 48px;
+    max-width: 520px;
+    line-height: 1.5;
+}
+
+.positioning {
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    padding-top: 24px;
+    border-top: 1px solid #e8e8e8;
+}
+
+footer {
+    padding: 32px 0 48px;
+    border-top: 1px solid #e8e8e8;
+    margin-top: auto;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #1a1a1a;
+}
+
+.divider {
+    color: #ddd;
+}
+
+.powered-by {
+    font-size: 13px;
+    color: #999;
+}
+
+.powered-by a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.powered-by a:hover {
+    opacity: 0.7;
+}
+
+/* Legal pages styling */
+.legal-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.legal-page h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.legal-page .last-updated {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 32px;
+}
+
+.legal-page h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.legal-page p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.legal-page ul {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.legal-page li {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.legal-page a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.legal-page a:hover {
+    opacity: 0.7;
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #1a1a1a;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 32px 0 16px;
+    }
+}
