@@ -45,8 +45,90 @@
                 Links are verified, redirected, and delivered with confidence.
             </p>
 
-            <div class="hero-illustration">
-                <img src="hero-illustration.svg" alt="ShareCD secure link delivery flow" width="600" height="200">
+            <div class="infrastructure-diagram">
+                <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" aria-label="ShareCD network infrastructure">
+                    <defs>
+                        <!-- Gradient for subtle depth -->
+                        <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:0.3" />
+                            <stop offset="50%" style="stop-color:#10b981;stop-opacity:0.15" />
+                            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:0.3" />
+                        </linearGradient>
+
+                        <!-- Subtle glow filter -->
+                        <filter id="softGlow">
+                            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Background grid (very subtle) -->
+                    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.015)" stroke-width="1"/>
+                    </pattern>
+                    <rect width="800" height="300" fill="url(#gridPattern)"/>
+
+                    <!-- Source nodes (left side) - 5 connection points -->
+                    <g opacity="0.4">
+                        <circle cx="60" cy="60" r="4" fill="#9ca3af"/>
+                        <circle cx="60" cy="110" r="4" fill="#9ca3af"/>
+                        <circle cx="60" cy="150" r="4" fill="#9ca3af"/>
+                        <circle cx="60" cy="190" r="4" fill="#9ca3af"/>
+                        <circle cx="60" cy="240" r="4" fill="#9ca3af"/>
+                    </g>
+
+                    <!-- Routing paths from sources to ShareCD hub -->
+                    <g stroke-linecap="round">
+                        <path d="M 64 60 Q 250 60, 380 140" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M 64 110 Q 250 110, 380 145" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M 64 150 L 380 150" stroke="url(#pathGradient)" stroke-width="2" fill="none" opacity="0.8"/>
+                        <path d="M 64 190 Q 250 190, 380 155" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M 64 240 Q 250 240, 380 160" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    </g>
+
+                    <!-- ShareCD central hub (routing nexus) -->
+                    <g filter="url(#softGlow)">
+                        <!-- Outer ring (infrastructure boundary) -->
+                        <circle cx="400" cy="150" r="28" fill="none" stroke="rgba(16, 185, 129, 0.1)" stroke-width="12"/>
+                        <!-- Inner core -->
+                        <circle cx="400" cy="150" r="18" fill="rgba(16, 185, 129, 0.08)" stroke="#10b981" stroke-width="2"/>
+                        <!-- Central routing point -->
+                        <circle cx="400" cy="150" r="6" fill="#10b981"/>
+                    </g>
+
+                    <!-- Routing paths from ShareCD hub to destinations -->
+                    <g stroke-linecap="round">
+                        <path d="M 420 140 Q 550 60, 736 60" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M 420 145 Q 550 110, 736 110" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M 420 150 L 736 150" stroke="url(#pathGradient)" stroke-width="2" fill="none" opacity="0.8"/>
+                        <path d="M 420 155 Q 550 190, 736 190" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M 420 160 Q 550 240, 736 240" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    </g>
+
+                    <!-- Destination nodes (right side) - 5 delivery points -->
+                    <g opacity="0.4">
+                        <circle cx="740" cy="60" r="4" fill="#9ca3af"/>
+                        <circle cx="740" cy="110" r="4" fill="#9ca3af"/>
+                        <circle cx="740" cy="150" r="4" fill="#9ca3af"/>
+                        <circle cx="740" cy="190" r="4" fill="#9ca3af"/>
+                        <circle cx="740" cy="240" r="4" fill="#9ca3af"/>
+                    </g>
+
+                    <!-- Subtle pulse animation on center hub -->
+                    <circle cx="400" cy="150" r="18" fill="none" stroke="#10b981" stroke-width="1" opacity="0.3">
+                        <animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <!-- Metric labels (infrastructure data) -->
+                    <g font-family="SF Mono, Monaco, Inconsolata, Courier New, monospace" font-size="10" fill="#9ca3af">
+                        <text x="400" y="95" text-anchor="middle" opacity="0.6">ROUTING HUB</text>
+                        <text x="400" y="215" text-anchor="middle" opacity="0.5">99.9% UPTIME</text>
+                    </g>
+                </svg>
             </div>
 
             <div class="positioning">

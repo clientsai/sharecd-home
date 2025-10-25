@@ -147,14 +147,15 @@ h1 {
     letter-spacing: -0.01em;
 }
 
-.hero-illustration {
-    margin-bottom: 64px;
+.infrastructure-diagram {
+    margin: 56px 0 72px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 24px;
 }
 
-.hero-illustration img {
+.infrastructure-diagram svg {
     max-width: 100%;
     height: auto;
     display: block;
