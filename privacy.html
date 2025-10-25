@@ -109,7 +109,7 @@
                 <a href="terms.html">Terms</a>
             </div>
             <div class="business-entity" style="margin-bottom: 8px;">
-                ShareCD™ is a service of Clients.ai, Inc. · Delaware, USA
+                ShareCD™ is a service of Clients.ai, Inc. · Ontario, Canada
             </div>
             <div class="powered-by">
                 Powered by <a href="https://clients.ai" target="_blank" rel="noopener">Clients.ai
@@ -119,9 +119,10 @@
                 </svg></a>
             </div>
             <div class="copyright" style="margin-top: 8px;">
-                © 2025 Clients.ai, Inc. All rights reserved.
+                © <span id="current-year">2025</span> Clients.ai, Inc. All rights reserved.
             </div>
         </footer>
     </div>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

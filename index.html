@@ -45,6 +45,10 @@
                 Links are verified, redirected, and delivered with confidence.
             </p>
 
+            <div class="hero-illustration">
+                <img src="hero-illustration.svg" alt="ShareCD secure link delivery flow" width="600" height="200">
+            </div>
+
             <div class="positioning">
                 ShareCD — a Clients Drive system powered by Clients.ai.
             </div>
@@ -122,10 +126,10 @@
                         </svg></a>
                     </div>
                     <div class="business-entity">
-                        ShareCD™ is a service of Clients.ai, Inc. · Delaware, USA
+                        ShareCD™ is a service of Clients.ai, Inc. · Ontario, Canada
                     </div>
                     <div class="copyright">
-                        © 2025 Clients.ai, Inc. All rights reserved.
+                        © <span id="current-year">2025</span> Clients.ai, Inc. All rights reserved.
                     </div>
                 </div>
                 <div class="footer-section footer-contact">
@@ -139,5 +143,6 @@
             </div>
         </footer>
     </div>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

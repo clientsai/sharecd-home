@@ -147,6 +147,19 @@ h1 {
     letter-spacing: -0.01em;
 }
 
+.hero-illustration {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-illustration img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .positioning {
     font-size: 14px;
     color: #999;
