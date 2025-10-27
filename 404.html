@@ -16,6 +16,17 @@
                         <img src="logo.svg" alt="ShareCD" class="logo-image" width="120" height="32">
                     </a>
                 </div>
+                <div class="header-right">
+                    <nav class="main-nav">
+                        <a href="about.html">About</a>
+                        <a href="security.html">Security</a>
+                        <a href="status.html">Status</a>
+                    </nav>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Operational</span>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -24,7 +35,7 @@
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
                     <path d="M8 4V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="8" cy="11" r="0.5" fill="currentColor"/>
+                    <circle cx="8" cy="11" r="0.75" fill="currentColor"/>
                 </svg>
                 <span>Link not found</span>
             </div>
@@ -34,13 +45,177 @@
                 The link you followed isn't active or has expired. This happens when links are no longer available or were entered incorrectly.
             </p>
 
-            <div style="margin: 48px 0;">
-                <a href="https://clients.ai" style="display: inline-block; padding: 16px 32px; background: #10b981; color: white; text-decoration: none; border-radius: 6px; font-size: 16px; font-weight: 600; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);">
-                    Get AI Agents That Bring You Clients
-                </a>
+            <div class="infrastructure-diagram">
+                <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" aria-label="ShareCD network infrastructure">
+                    <defs>
+                        <!-- Gradient for subtle depth -->
+                        <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:0.3" />
+                            <stop offset="50%" style="stop-color:#10b981;stop-opacity:0.15" />
+                            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:0.3" />
+                        </linearGradient>
+
+                        <!-- Subtle glow filter -->
+                        <filter id="softGlow">
+                            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Background grid (very subtle) -->
+                    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.015)" stroke-width="1"/>
+                    </pattern>
+                    <rect width="800" height="300" fill="url(#gridPattern)"/>
+
+                    <!-- Source nodes (left side) - 5 connection points with pulsing -->
+                    <g>
+                        <circle cx="60" cy="60" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="60" cy="110" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="60" cy="150" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="60" cy="190" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="60" cy="240" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+
+                    <!-- Routing paths from sources to ShareCD hub -->
+                    <g stroke-linecap="round">
+                        <path d="M 64 60 Q 250 60, 380 140" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path1"/>
+                        <path d="M 64 110 Q 250 110, 380 145" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path2"/>
+                        <path d="M 64 150 L 380 150" stroke="url(#pathGradient)" stroke-width="2" fill="none" opacity="0.8" id="path3"/>
+                        <path d="M 64 190 Q 250 190, 380 155" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path4"/>
+                        <path d="M 64 240 Q 250 240, 380 160" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path5"/>
+                    </g>
+
+                    <!-- Traveling dots on incoming paths (slower, more tasteful) -->
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" repeatCount="indefinite">
+                            <mpath href="#path1"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="1s" repeatCount="indefinite">
+                            <mpath href="#path2"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="2s" repeatCount="indefinite">
+                            <mpath href="#path3"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="3s" repeatCount="indefinite">
+                            <mpath href="#path4"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="4s" repeatCount="indefinite">
+                            <mpath href="#path5"/>
+                        </animateMotion>
+                    </circle>
+
+                    <!-- ShareCD central hub (routing nexus) with enhanced pulsing -->
+                    <g filter="url(#softGlow)">
+                        <!-- Outer ring with pulse -->
+                        <circle cx="400" cy="150" r="28" fill="none" stroke="rgba(16, 185, 129, 0.1)" stroke-width="12">
+                            <animate attributeName="r" values="28;32;28" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <!-- Inner core with subtle fill pulse -->
+                        <circle cx="400" cy="150" r="18" fill="rgba(16, 185, 129, 0.08)" stroke="#10b981" stroke-width="2">
+                            <animate attributeName="fill-opacity" values="0.08;0.15;0.08" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <!-- Central routing point with pulse -->
+                        <circle cx="400" cy="150" r="6" fill="#10b981">
+                            <animate attributeName="r" values="6;7;6" dur="1s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+
+                    <!-- Routing paths from ShareCD hub to destinations -->
+                    <g stroke-linecap="round">
+                        <path d="M 420 140 Q 550 60, 736 60" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path6"/>
+                        <path d="M 420 145 Q 550 110, 736 110" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path7"/>
+                        <path d="M 420 150 L 736 150" stroke="url(#pathGradient)" stroke-width="2" fill="none" opacity="0.8" id="path8"/>
+                        <path d="M 420 155 Q 550 190, 736 190" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path9"/>
+                        <path d="M 420 160 Q 550 240, 736 240" stroke="url(#pathGradient)" stroke-width="1.5" fill="none" opacity="0.6" id="path10"/>
+                    </g>
+
+                    <!-- Traveling dots on outgoing paths (slower, more tasteful) -->
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" repeatCount="indefinite">
+                            <mpath href="#path6"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="1s" repeatCount="indefinite">
+                            <mpath href="#path7"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="2s" repeatCount="indefinite">
+                            <mpath href="#path8"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="3s" repeatCount="indefinite">
+                            <mpath href="#path9"/>
+                        </animateMotion>
+                    </circle>
+                    <circle r="2.5" fill="#10b981" opacity="0.5">
+                        <animateMotion dur="5s" begin="4s" repeatCount="indefinite">
+                            <mpath href="#path10"/>
+                        </animateMotion>
+                    </circle>
+
+                    <!-- Destination nodes (right side) - 5 delivery points with pulsing -->
+                    <g>
+                        <circle cx="740" cy="60" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="740" cy="110" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="740" cy="150" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="740" cy="190" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="740" cy="240" r="4" fill="#9ca3af" opacity="0.4">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+
+                    <!-- Additional pulse animation on center hub -->
+                    <circle cx="400" cy="150" r="18" fill="none" stroke="#10b981" stroke-width="1" opacity="0.3">
+                        <animate attributeName="r" values="18;32;18" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <!-- Enhanced labels with clearer service description -->
+                    <g font-family="SF Mono, Monaco, Inconsolata, Courier New, monospace" font-size="10" fill="#9ca3af">
+                        <text x="400" y="95" text-anchor="middle" opacity="0.6">301 REDIRECT HUB</text>
+                        <text x="400" y="215" text-anchor="middle" opacity="0.5">SECURE LINK DELIVERY · 99.9% UPTIME</text>
+                    </g>
+                </svg>
             </div>
 
             <div class="positioning">
+                <a href="https://clients.ai" style="display: inline-block; padding: 16px 32px; background: #10b981; color: white; text-decoration: none; border-radius: 6px; font-size: 16px; font-weight: 600; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); margin-bottom: 24px;">Get AI Agents That Bring You Clients</a>
+            </div>
+
+            <div style="font-size: 15px; color: #666; margin-top: 24px; margin-bottom: 24px; line-height: 1.6;">
                 Clients.ai gets you clients automatically — no ads, no cold outreach, no tech headaches. Just consistent, effortless client flow.
             </div>
 
