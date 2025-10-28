@@ -55,7 +55,7 @@ header {
 }
 
 .logo-lock {
-    color: #10b981;
+    color: #7E1FFF;
 }
 
 /* Status indicator - subtle green dot */
@@ -70,18 +70,18 @@ header {
 .status-dot {
     width: 8px;
     height: 8px;
-    background: #10b981;
+    background: #7E1FFF;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+    box-shadow: 0 0 0 2px rgba(126, 31, 255, 0.15);
     animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+        box-shadow: 0 0 0 2px rgba(126, 31, 255, 0.15);
     }
     50% {
-        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        box-shadow: 0 0 0 4px rgba(126, 31, 255, 0.1);
     }
 }
 
@@ -126,7 +126,7 @@ main {
 }
 
 .security-badge svg {
-    color: #10b981;
+    color: #7E1FFF;
 }
 
 h1 {
@@ -179,8 +179,8 @@ h1 {
     font-weight: 500;
     margin-top: 20px;
     padding: 6px 12px;
-    background: rgba(16, 185, 129, 0.06);
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    background: rgba(126, 31, 255, 0.06);
+    border: 1px solid rgba(126, 31, 255, 0.15);
     border-radius: 16px;
     width: fit-content;
 }
@@ -405,7 +405,7 @@ footer {
     left: 0;
     right: 0;
     height: 2px;
-    background: #10b981;
+    background: #7E1FFF;
 }
 
 /* Status page components */
@@ -417,8 +417,8 @@ footer {
 }
 
 .status-card-operational {
-    background: linear-gradient(to bottom, rgba(16, 185, 129, 0.03), rgba(16, 185, 129, 0.01));
-    border-color: rgba(16, 185, 129, 0.2);
+    background: linear-gradient(to bottom, rgba(126, 31, 255, 0.03), rgba(126, 31, 255, 0.01));
+    border-color: rgba(126, 31, 255, 0.2);
 }
 
 .status-card-header {
@@ -483,7 +483,7 @@ footer {
 }
 
 .service-indicator.operational {
-    color: #10b981;
+    color: #7E1FFF;
 }
 
 .service-indicator .status-dot {
@@ -528,8 +528,8 @@ footer {
     display: flex;
     gap: 12px;
     padding: 16px;
-    background: rgba(16, 185, 129, 0.05);
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    background: rgba(126, 31, 255, 0.05);
+    border: 1px solid rgba(126, 31, 255, 0.15);
     border-radius: 6px;
     margin-bottom: 32px;
     font-size: 14px;
@@ -538,7 +538,7 @@ footer {
 }
 
 .info-box svg {
-    color: #10b981;
+    color: #7E1FFF;
 }
 
 .legal-page h1 {
@@ -722,7 +722,7 @@ footer {
 
 .security-feature:hover {
     background: rgba(255, 255, 255, 0.9);
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(126, 31, 255, 0.2);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -734,7 +734,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(16, 185, 129, 0.08);
+    background: rgba(126, 31, 255, 0.08);
     border-radius: 6px;
 }
 
@@ -768,7 +768,7 @@ footer {
 
 .feature-list li::before {
     content: "•";
-    color: #10b981;
+    color: #7E1FFF;
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -793,7 +793,7 @@ footer {
 
 .compliance-card:hover {
     background: rgba(255, 255, 255, 0.9);
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(126, 31, 255, 0.2);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -801,8 +801,8 @@ footer {
 .compliance-badge {
     display: inline-block;
     padding: 6px 16px;
-    background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
+    background: rgba(126, 31, 255, 0.1);
+    color: #7E1FFF;
     border-radius: 4px;
     font-size: 11px;
     font-weight: 600;
@@ -844,15 +844,15 @@ footer {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: rgba(16, 185, 129, 0.08);
-    border: 2px solid rgba(16, 185, 129, 0.2);
+    background: rgba(126, 31, 255, 0.08);
+    border: 2px solid rgba(126, 31, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 13px;
     font-weight: 600;
     font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
-    color: #10b981;
+    color: #7E1FFF;
 }
 
 .timeline-content {
@@ -897,9 +897,9 @@ footer {
     gap: 20px;
     align-items: flex-start;
     padding: 32px;
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(126, 31, 255, 0.05);
     border-radius: 8px;
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(126, 31, 255, 0.2);
     margin-bottom: 48px;
 }
 
@@ -1004,7 +1004,7 @@ footer {
 
 .partner-list li::before {
     content: "→";
-    color: #10b981;
+    color: #7E1FFF;
     position: absolute;
     left: 0;
     font-weight: 600;
