@@ -364,26 +364,14 @@ footer {
 
 /* Logo image styling */
 .logo-link {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-    text-decoration: none;
+    display: block;
+    line-height: 0;
 }
 
 .logo-image {
     display: block;
-    height: 32px;
+    height: 40px;
     width: auto;
-}
-
-.logo-subtitle {
-    font-size: 11px;
-    font-weight: 400;
-    color: #999;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    margin-left: 2px;
 }
 
 /* Main navigation */
