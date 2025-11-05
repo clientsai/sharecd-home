@@ -1214,6 +1214,121 @@ footer {
     margin-top: 12px;
 }
 
+/* Trust Stats Section */
+.trust-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin: 48px 0 64px;
+    padding: 32px 24px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 600;
+    color: #7E1FFF;
+    margin-bottom: 8px;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+    letter-spacing: -0.02em;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+/* How It Works Section */
+.how-it-works {
+    margin: 64px 0;
+    padding: 48px 32px;
+    background: linear-gradient(to bottom, rgba(126, 31, 255, 0.02) 0%, rgba(126, 31, 255, 0.04) 100%);
+    border-radius: 12px;
+}
+
+.how-it-works h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(126, 31, 255, 0.1);
+    color: #7E1FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+}
+
+.step-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.step-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Invite Only Badge */
+.invite-only {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    margin-top: 16px;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    width: fit-content;
+    letter-spacing: -0.01em;
+}
+
+.invite-only svg {
+    color: #999;
+    flex-shrink: 0;
+}
+
 /* CTA Button Styling */
 .cta-button {
     display: inline-block;
@@ -1230,6 +1345,61 @@ footer {
 .cta-button:hover {
     background: #6519CC;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(126, 31, 255, 0.3);
+}
+
+/* Mobile Responsive for New Sections */
+@media (max-width: 768px) {
+    .trust-stats {
+        gap: 24px;
+        padding: 24px 16px;
+        margin: 32px 0 48px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .how-it-works {
+        margin: 48px 0;
+        padding: 32px 20px;
+    }
+
+    .how-it-works h2 {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .trust-stats {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 16px;
+    }
+
+    .stat-item {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .invite-only {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
 }
 
 /* Mobile CTA Button */
@@ -1247,6 +1417,28 @@ footer {
         width: 100%;
         text-align: center;
         padding: 12px 20px;
+    }
+
+    .how-it-works {
+        padding: 24px 16px;
+    }
+
+    .how-it-works h2 {
+        font-size: 22px;
+    }
+
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .step-content h3 {
+        font-size: 15px;
+    }
+
+    .step-content p {
+        font-size: 13px;
     }
 }
 
@@ -1557,7 +1749,7 @@ footer {
     }
 
     .footer-nav {
-        gap: 20px;
+        gap: 16px;
     }
 
     .footer-nav a {
@@ -1576,13 +1768,11 @@ footer {
     }
 
     .footer-nav {
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 24px;
+        gap: 12px;
     }
 
     .footer-nav a {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .footer-meta {
