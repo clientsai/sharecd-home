@@ -618,12 +618,23 @@ footer {
 
 /* Responsive design */
 @media (max-width: 640px) {
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+
     .container {
         box-shadow: none;
+        padding: 0 16px;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 15px;
     }
 
     .header-content {
@@ -646,6 +657,22 @@ footer {
         font-size: 13px;
     }
 
+    /* Hide complex SVG diagrams on mobile - too wide for small screens */
+    .infrastructure-diagram {
+        display: none;
+    }
+
+    /* Footer mobile optimization */
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footer-links .divider {
+        display: none;
+    }
+
     .footer-content {
         flex-direction: column;
         gap: 24px;
@@ -655,20 +682,47 @@ footer {
         text-align: left;
     }
 
+    /* Certification badges mobile layout */
+    .cert-badges {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
     header {
-        padding: 32px 0 20px;
+        padding: 24px 0 16px;
     }
 
     main {
-        padding: 48px 0;
+        padding: 32px 0;
     }
 
     .legal-page h1 {
         font-size: 28px;
     }
+
+    /* Logo size adjustment */
+    .logo-image {
+        height: 28px;
+        width: auto;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Further mobile optimizations for smallest screens */
+    .container {
+        padding: 0 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
     .status-text {
         display: none;
     }
@@ -677,10 +731,7 @@ footer {
         display: none;
     }
 
-    .cert-badges {
-        gap: 12px;
-    }
-
+    /* Even smaller certification badges on tiny screens */
     .cert-badge svg {
         width: 28px;
         height: 28px;
@@ -698,6 +749,61 @@ footer {
 
     .contact-links .divider {
         display: none;
+    }
+
+    /* Smaller logo on smallest devices */
+    .logo-image {
+        height: 24px;
+        width: auto;
+    }
+
+    /* Adjust positioning text */
+    .positioning {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Security badge adjustment */
+    .security-badge {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Verified badge adjustment */
+    .verified-badge {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    /* Copyright text adjustment */
+    .copyright {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+
+/* Special handling for very small devices (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    /* Single column for certification badges on very small screens */
+    .cert-badges {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
     }
 }
 
@@ -889,6 +995,30 @@ footer {
         height: 48px;
         font-size: 11px;
     }
+
+    /* Hide timeline visual on very small screens */
+    .response-timeline {
+        gap: 16px;
+    }
+
+    .timeline-item {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .security-feature {
+        padding: 16px;
+    }
+
+    .feature-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .compliance-card {
+        padding: 24px 16px;
+    }
 }
 
 /* Status Page Components */
@@ -949,6 +1079,34 @@ footer {
         flex-direction: column;
         gap: 16px;
         padding: 24px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .status-banner {
+        padding: 16px;
+    }
+
+    .metric-card {
+        padding: 16px;
+    }
+
+    .metric-value {
+        font-size: 24px;
+    }
+
+    .service-item {
+        padding: 12px;
     }
 }
 
@@ -1054,4 +1212,40 @@ footer {
 
 .terms-subsection ul {
     margin-top: 12px;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #7E1FFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 24px;
+    transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #6519CC;
+    transform: translateY(-2px);
+}
+
+/* Mobile CTA Button */
+@media (max-width: 640px) {
+    .cta-button {
+        padding: 10px 24px;
+        font-size: 14px;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
 }
