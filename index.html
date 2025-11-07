@@ -74,6 +74,21 @@
             </div>
         </div>
 
+        <!-- Industry Modal -->
+        <div class="industry-modal" id="industryModal" role="dialog" aria-labelledby="industryModalTitle" aria-hidden="true">
+            <div class="industry-modal-overlay" id="industryModalOverlay"></div>
+            <div class="industry-modal-content">
+                <button class="industry-modal-close" id="industryModalClose" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <h2 id="industryModalTitle"></h2>
+                <p id="industryModalContent"></p>
+                <a href="#" id="industryModalCTA" class="industry-modal-cta">Learn more at Clients.ai →</a>
+            </div>
+        </div>
+
         <main>
             <div class="security-badge">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +98,7 @@
                 <span>Private infrastructure</span>
             </div>
 
-            <h1>Secure Link Delivery</h1>
+            <h1>Secure <span id="typewriter" class="typewriter"></span><span class="typewriter-cursor">|</span></h1>
             <p class="description">
                 Private infrastructure for secure content delivery. Verified access, encrypted transmission, and complete transparency for every shared resource.
             </p>
@@ -272,6 +287,88 @@
                 </div>
             </div>
 
+            <div class="dark-feature-section">
+                <div class="dark-feature-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 6L12 12V22C12 30 18 37.5 24 42C30 37.5 36 30 36 22V12L24 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M18 24L22.5 28.5L30 19.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h2>Security never comes second</h2>
+                <p>Every shared link is protected with 256-bit AES encryption, verified recipient access, and automatic expiration. Your content remains secure from upload to delivery, with complete transparency at every step.</p>
+            </div>
+
+            <div class="industries-section">
+                <h2>Trusted across industries</h2>
+                <div class="industries-grid">
+                    <div class="industry-card" data-industry="course-creators">
+                        <h3>Courses & Communities</h3>
+                        <p>Share personalized resources, guides, and checklists that nurture prospects into enrolled students—automatically delivered by AI agents.</p>
+                        <span class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="industry-card" data-industry="ecommerce">
+                        <h3>E-commerce</h3>
+                        <p>Deliver product guides, recommendations, and helpful tips that convert browsers into buyers through personalized automated outreach.</p>
+                        <span class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="industry-card" data-industry="agencies">
+                        <h3>Agencies</h3>
+                        <p>Share tailored proposals and value-focused content with warm accounts, filling your pipeline without expanding your team.</p>
+                        <span class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="industry-card" data-industry="consultants">
+                        <h3>Coaches & Consultants</h3>
+                        <p>Distribute free resources and personalized guides that build trust and drive calendar bookings—all on autopilot.</p>
+                        <span class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="industry-card" data-industry="affiliate-marketers">
+                        <h3>Affiliate Marketers</h3>
+                        <p>Share value-driven content featuring your affiliate links, maximizing commission opportunities through automated personalized outreach.</p>
+                        <span class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="industry-card" data-industry="service-providers">
+                        <h3>Service Providers</h3>
+                        <p>Deliver checklists and helpful guides that keep your appointment book full through consistent automated prospect engagement.</p>
+                        <span class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
             <div class="how-it-works">
                 <h2>Link Infrastructure</h2>
                 <div class="steps">
@@ -373,6 +470,139 @@
         }
 
         uploadBtn.addEventListener('click', openModal);
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    })();
+
+    // Typewriter Effect
+    (function() {
+        const typewriterEl = document.getElementById('typewriter');
+        const phrases = [
+            'Link Delivery',
+            'Asset Sharing',
+            'Content Distribution',
+            'File Transfer'
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isPaused = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isPaused) {
+                setTimeout(type, 2000);
+                isPaused = false;
+                return;
+            }
+
+            if (isDeleting) {
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 500);
+                    return;
+                }
+            } else {
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    isPaused = true;
+                    setTimeout(type, 2000);
+                    return;
+                }
+            }
+
+            const typingSpeed = isDeleting ? 50 : 100;
+            setTimeout(type, typingSpeed);
+        }
+
+        // Start typing after a brief delay
+        setTimeout(type, 500);
+    })();
+
+    // Industry Modal
+    (function() {
+        const modal = document.getElementById('industryModal');
+        const modalClose = document.getElementById('industryModalClose');
+        const modalOverlay = document.getElementById('industryModalOverlay');
+        const modalTitle = document.getElementById('industryModalTitle');
+        const modalContent = document.getElementById('industryModalContent');
+        const modalCTA = document.getElementById('industryModalCTA');
+
+        const industryData = {
+            'course-creators': {
+                title: 'Courses & Communities',
+                content: 'ShareCD enables AI agents to automatically share personalized resources—guides, checklists, worksheets, and planners—with prospects in your target audience. Each asset is securely stored and delivered through verified links, helping nurture leads into enrolled students without manual follow-up. Your personalized content reaches prospects at the right moment, building trust and driving conversions.',
+                url: 'https://www.clients.ai/course-creators'
+            },
+            'ecommerce': {
+                title: 'E-commerce',
+                content: 'Deliver product recommendations, buying guides, and helpful tips through secure, personalized links. ShareCD infrastructure ensures your AI-created content reaches qualified buyers automatically, reducing cart abandonment and increasing conversions. Each asset is tracked for engagement, giving you complete transparency into what drives purchases.',
+                url: 'https://www.clients.ai/ecommerce'
+            },
+            'agencies': {
+                title: 'Agencies',
+                content: 'Share tailored proposals, case studies, and value-focused resources with warm prospects through verified, time-expiring links. ShareCD handles secure delivery while your AI agents personalize content for each account. Scale your outreach without expanding your team, filling your pipeline with qualified leads ready for your services.',
+                url: 'https://www.clients.ai/agencies'
+            },
+            'consultants': {
+                title: 'Coaches & Consultants',
+                content: 'Distribute free resources and personalized guides that address specific prospect challenges through secure ShareCD links. AI agents identify qualified leads and share relevant content automatically, building trust and driving calendar bookings. Each delivered asset is tracked, showing exactly which resources convert browsers into booked calls.',
+                url: 'https://www.clients.ai/consultants'
+            },
+            'affiliate-marketers': {
+                title: 'Affiliate Marketers',
+                content: 'Share value-driven content featuring your affiliate links through personalized, tracked delivery. ShareCD infrastructure ensures secure transmission while AI agents handle prospect discovery and content personalization. Maximize commission opportunities with automated outreach that feels personal, complete with FTC-compliant tracking and 90-day cookie support.',
+                url: 'https://www.clients.ai/affiliate-marketers'
+            },
+            'service-providers': {
+                title: 'Service Providers',
+                content: 'Keep your appointment book full with secure delivery of helpful checklists and guides. ShareCD enables AI agents to share resources automatically when answering prospect questions, with each asset linking directly to your booking page. Follow-up reminders are delivered through verified links, ensuring no qualified lead is lost to hesitation or busy schedules.',
+                url: 'https://www.clients.ai/service-providers'
+            }
+        };
+
+        function openModal(industry) {
+            const data = industryData[industry];
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+            modalContent.textContent = data.content;
+            modalCTA.href = data.url;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        // Add click handlers to industry cards
+        document.querySelectorAll('.industry-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const industry = this.getAttribute('data-industry');
+                openModal(industry);
+            });
+        });
+
         modalClose.addEventListener('click', closeModal);
         modalOverlay.addEventListener('click', closeModal);
 

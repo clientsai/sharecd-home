@@ -2080,3 +2080,253 @@ footer {
         gap: 8px;
     }
 }
+
+/* Typewriter Animation */
+.typewriter {
+    display: inline-block;
+    min-width: 1px;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+    color: #7E1FFF;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Dark Feature Section */
+.dark-feature-section {
+    margin: 80px 0;
+    padding: 80px 48px;
+    background: #2B2929;
+    border-radius: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.dark-feature-icon {
+    margin: 0 auto 32px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-feature-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: #ffffff;
+}
+
+.dark-feature-section h2 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.dark-feature-section p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+/* Industries Section */
+.industries-section {
+    margin: 80px 0 64px 0;
+}
+
+.industries-section h2 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 64px;
+    color: #1a1a1a;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.industry-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.industry-card:hover {
+    border-color: rgba(126, 31, 255, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transform: translateY(-2px);
+}
+
+.industry-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.industry-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.industry-card .learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #7E1FFF;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.industry-card:hover .learn-more {
+    gap: 10px;
+}
+
+.industry-card .learn-more svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Industry Modal */
+.industry-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.industry-modal.active {
+    display: flex;
+}
+
+.industry-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.industry-modal-content {
+    position: relative;
+    max-width: 560px;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 48px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    z-index: 10001;
+}
+
+.industry-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.industry-modal-close:hover {
+    color: #666;
+}
+
+.industry-modal-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.industry-modal-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.industry-modal-cta {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #7E1FFF;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(126, 31, 255, 0.3);
+    transition: border-color 0.2s ease;
+}
+
+.industry-modal-cta:hover {
+    border-color: #7E1FFF;
+}
+
+@media (max-width: 768px) {
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .industry-card {
+        padding: 32px 24px;
+    }
+
+    .dark-feature-section {
+        padding: 60px 32px;
+        margin: 60px 0;
+    }
+
+    .dark-feature-section h2 {
+        font-size: 32px;
+    }
+
+    .industries-section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .industry-modal-content {
+        padding: 40px 32px;
+    }
+}
