@@ -1798,3 +1798,151 @@ footer {
         font-size: 10px;
     }
 }
+
+/* Header Action Buttons (Upload/Sign In) */
+.header-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header-action-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.header-action-btn svg {
+    flex-shrink: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 480px;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 48px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 8px;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #1a1a1a;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.modal-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 16px;
+}
+
+.modal-cta {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 24px;
+    background: #7E1FFF;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 24px;
+    transition: all 0.2s ease;
+}
+
+.modal-cta:hover {
+    background: #6519CC;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(126, 31, 255, 0.3);
+}
+
+.modal-fine-print {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+    .modal-content {
+        padding: 32px 24px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    .header-action-btn span {
+        display: none;
+    }
+
+    .header-action-btn {
+        padding: 8px 12px;
+    }
+}
