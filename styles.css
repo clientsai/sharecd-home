@@ -19,11 +19,30 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 720px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 48px;
     background: #fafafa;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
 }
 
 /* Header with status indicator */
@@ -1945,4 +1964,38 @@ footer {
     .header-action-btn {
         padding: 8px 12px;
     }
+}
+
+/* Homepage subdescription */
+.subdescription {
+    font-size: 15px;
+    color: #666;
+    margin-top: 16px;
+    font-weight: 400;
+}
+
+/* Service notice */
+.service-notice {
+    margin: 48px 0;
+    padding: 20px 24px;
+    background: rgba(0, 0, 0, 0.015);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-notice p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.service-notice a {
+    color: #7E1FFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.service-notice a:hover {
+    text-decoration: underline;
 }
