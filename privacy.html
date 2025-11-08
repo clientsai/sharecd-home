@@ -9,19 +9,46 @@
 </head>
 <body>
     <div class="legal-page">
-        <div class="legal-header">
+        <header>
             <div class="header-content">
                 <div class="logo">
                     <a href="/" class="logo-link">
                         <img src="logo.svg" alt="ShareCD" class="logo-image" width="120" height="40">
-                        
                     </a>
                 </div>
-                <nav class="main-nav">
-                    <a href="/about">About</a>
-                    <a href="/security">Security</a>
-                    <a href="/status">Status</a>
-                </nav>
+                <div class="header-right">
+                    <button class="header-action-btn" id="uploadBtn" aria-label="Upload">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 14V4M10 4L6 8M10 4L14 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 16H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span>Upload</span>
+                    </button>
+                    <a href="https://app.clients.ai" class="header-action-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M4 17C4 13.5 6.5 11 10 11C13.5 11 16 13.5 16 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span>Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Upload Modal -->
+        <div class="modal" id="uploadModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <h2 id="modalTitle">Private Service</h2>
+                <p class="modal-description">ShareCD is a private infrastructure service exclusively for Clients.ai members.</p>
+                <p class="modal-description">Our AI agents create personalized content for your prospects and securely share it through verified links—driving meaningful engagement and qualified leads to your business.</p>
+                <a href="https://clients.ai" class="modal-cta">Start Free 18-Day Trial</a>
+                <p class="modal-fine-print">Get your first client free. No credit card required.</p>
             </div>
         </div>
 
@@ -279,7 +306,7 @@
             </div>
         </div>
 
-                <footer class="ive-footer">
+        <footer class="ive-footer">
             <div class="footer-wrapper">
                 <nav class="footer-main-nav">
                     <a href="/about" class="footer-nav-item">
@@ -327,5 +354,36 @@
         </footer>
     </div>
     <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    <script>
+    // Upload Modal
+    (function() {
+        const modal = document.getElementById('uploadModal');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const modalClose = document.getElementById('modalClose');
+        const modalOverlay = document.getElementById('modalOverlay');
+
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        uploadBtn.addEventListener('click', openModal);
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
