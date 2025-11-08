@@ -1986,7 +1986,7 @@ footer {
 
 /* Service notice */
 .service-notice {
-    margin: 32px 0;
+    margin: 32px 0 0 0;
     padding: 20px 24px;
     background: rgba(0, 0, 0, 0.015);
     border: 1px solid rgba(0, 0, 0, 0.04);
