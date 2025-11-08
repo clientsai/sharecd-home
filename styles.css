@@ -2106,7 +2106,9 @@ footer {
     animation: blink 1s step-end infinite;
     font-weight: 300;
     color: #7E1FFF;
+    -webkit-text-fill-color: #7E1FFF;
     margin-left: 2px;
+    background: none;
 }
 
 @keyframes blink {
