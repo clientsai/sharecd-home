@@ -1,44 +1,39 @@
 <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Premium subtle gradients for Jony Ive aesthetic -->
     <linearGradient id="floppyBody" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
-      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:0.9" />
+      <stop offset="0%" style="stop-color:#f8f9fa" />
+      <stop offset="100%" style="stop-color:#e9ecef" />
     </linearGradient>
     <linearGradient id="floppyLabel" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#7E1FFF;stop-opacity:0.12" />
-      <stop offset="100%" style="stop-color:#7E1FFF;stop-opacity:0.08" />
+      <stop offset="0%" style="stop-color:#dee2e6" />
+      <stop offset="100%" style="stop-color:#ced4da" />
     </linearGradient>
-    <linearGradient id="floppyShutter" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#6b7280;stop-opacity:0.9" />
-      <stop offset="100%" style="stop-color:#4b5563;stop-opacity:0.9" />
+    <linearGradient id="metalShutter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#495057" />
+      <stop offset="50%" style="stop-color:#343a40" />
+      <stop offset="100%" style="stop-color:#212529" />
     </linearGradient>
   </defs>
-
-  <!-- Modern Floppy Disk -->
-  <g transform="translate(16, 16)">
-    <!-- Main body (square floppy shape) -->
-    <rect x="-12" y="-13" width="24" height="26" rx="1.5" fill="url(#floppyBody)" stroke="#7E1FFF" stroke-width="1.5"/>
-
-    <!-- Label area at top -->
-    <rect x="-10" y="-11" width="20" height="10" rx="0.5" fill="url(#floppyLabel)"/>
-
-    <!-- CD text on label -->
-    <text x="0" y="-4" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="6" font-weight="700" fill="#7E1FFF" letter-spacing="-0.5">CD</text>
-
-    <!-- Metal shutter at bottom (iconic floppy element) -->
-    <rect x="-9" y="6" width="18" height="5" rx="0.5" fill="url(#floppyShutter)"/>
-    <rect x="-8" y="7" width="16" height="3" rx="0.3" fill="none" stroke="#9ca3af" stroke-width="0.5" opacity="0.4"/>
-
-    <!-- Write-protect notch (bottom right corner detail) -->
-    <rect x="8" y="9" width="2" height="2" rx="0.3" fill="#9ca3af" opacity="0.5"/>
-
-    <!-- Center hub circle (classic floppy detail) -->
-    <circle cx="0" cy="3" r="2.5" fill="none" stroke="#7E1FFF" stroke-width="0.8" opacity="0.3"/>
-  </g>
-
+  <!-- Floppy Disk - Maximized and more recognizable -->
+  <!-- Main floppy body - square with slight vertical orientation -->
+  <rect x="1" y="4" width="30" height="32" rx="1.5" fill="url(#floppyBody)" stroke="#adb5bd" stroke-width="1"/>
+  <!-- Label area at top (classic floppy feature) -->
+  <rect x="3" y="6" width="26" height="12" rx="0.8" fill="url(#floppyLabel)"/>
+  <!-- "CD" text on label - centered and bold -->
+  <text x="16" y="14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="7.5" font-weight="700" fill="#495057" letter-spacing="-0.3">CD</text>
+  <!-- Metal shutter at bottom - THE defining floppy disk feature -->
+  <rect x="4" y="26" width="24" height="7.5" rx="0.8" fill="url(#metalShutter)"/>
+  <!-- Shutter detail lines for metallic appearance -->
+  <rect x="5" y="27.5" width="22" height="1.5" rx="0.3" fill="#000000" opacity="0.15"/>
+  <rect x="5" y="30.5" width="22" height="1" rx="0.3" fill="#ffffff" opacity="0.1"/>
+  <!-- Write-protect notch (bottom left corner - classic floppy feature) -->
+  <rect x="2.5" y="31" width="3.5" height="3.5" rx="0.4" fill="#6c757d"/>
+  <!-- Center hub circle (classic floppy detail) -->
+  <circle cx="16" cy="21" r="3.5" fill="none" stroke="#6c757d" stroke-width="1" opacity="0.3"/>
+  <circle cx="16" cy="21" r="1.5" fill="#6c757d" opacity="0.2"/>
   <!-- ShareCD Typography -->
   <text x="36" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="currentColor" letter-spacing="-0.02em">ShareCD</text>
-
   <!-- Clients Drive Subtitle -->
-  <text x="36" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="400" fill="#999999" letter-spacing="0.03em">Clients Drive</text>
+  <text x="36" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="400" fill="#999999" letter-spacing="0.03em">Your Clients Drive</text>
 </svg>
